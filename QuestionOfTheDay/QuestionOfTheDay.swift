@@ -7,7 +7,7 @@
 
 import Foundation
 
-class QuestionOfTheDay{
+class QuestionOfTheDay : NSObject{
     var create:NSDate
     var update:NSDate
     var objectID:String
@@ -27,7 +27,7 @@ class QuestionOfTheDay{
         self.update = NSDate()
         self.objectID = ""
     }
-    convenience init(){
+    override convenience init(){
         self.init(question: "", answer0: "", answer1: "", answer2: "")
     }
 }

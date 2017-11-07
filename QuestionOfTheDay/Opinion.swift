@@ -7,7 +7,7 @@
 
 import Foundation
 @objcMembers
-class Opinion{
+class Opinion : NSObject{
     var objectID: String?
     var question:QuestionOfTheDay
     var answer:Int
