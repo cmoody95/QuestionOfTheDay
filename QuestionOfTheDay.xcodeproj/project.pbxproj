@@ -12,6 +12,9 @@
 		0F22E1B41E8407D1004B722A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F22E1B21E8407D1004B722A /* Main.storyboard */; };
 		0F22E1B61E8407D1004B722A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F22E1B51E8407D1004B722A /* Assets.xcassets */; };
 		0F22E1B91E8407D1004B722A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F22E1B71E8407D1004B722A /* LaunchScreen.storyboard */; };
+		8364079A1FAF8D4B00DB5BB6 /* QuestionOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836407991FAF8D4B00DB5BB6 /* QuestionOfTheDay.swift */; };
+		8364079C1FAF91CD00DB5BB6 /* Opinion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364079B1FAF91CD00DB5BB6 /* Opinion.swift */; };
+		8364079E1FAF944D00DB5BB6 /* Statistician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364079D1FAF944D00DB5BB6 /* Statistician.swift */; };
 		FB86633BC42CE4C4E2F4BF7D /* Pods_QuestionOfTheDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E314E8FDEA0A05DB832318 /* Pods_QuestionOfTheDay.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +27,9 @@
 		0F22E1B81E8407D1004B722A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F22E1BA1E8407D1004B722A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6042A8B57992FAE32494E3C2 /* Pods-QuestionOfTheDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionOfTheDay.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuestionOfTheDay/Pods-QuestionOfTheDay.release.xcconfig"; sourceTree = "<group>"; };
+		836407991FAF8D4B00DB5BB6 /* QuestionOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOfTheDay.swift; sourceTree = "<group>"; };
+		8364079B1FAF91CD00DB5BB6 /* Opinion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opinion.swift; sourceTree = "<group>"; };
+		8364079D1FAF944D00DB5BB6 /* Statistician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistician.swift; sourceTree = "<group>"; };
 		C1E314E8FDEA0A05DB832318 /* Pods_QuestionOfTheDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionOfTheDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF349628D74999AD67993D5 /* Pods-QuestionOfTheDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionOfTheDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuestionOfTheDay/Pods-QuestionOfTheDay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +69,9 @@
 			children = (
 				0F22E1AE1E8407D1004B722A /* AppDelegate.swift */,
 				0F22E1B01E8407D1004B722A /* ViewController.swift */,
+				836407991FAF8D4B00DB5BB6 /* QuestionOfTheDay.swift */,
+				8364079B1FAF91CD00DB5BB6 /* Opinion.swift */,
+				8364079D1FAF944D00DB5BB6 /* Statistician.swift */,
 				0F22E1B21E8407D1004B722A /* Main.storyboard */,
 				0F22E1B51E8407D1004B722A /* Assets.xcassets */,
 				0F22E1B71E8407D1004B722A /* LaunchScreen.storyboard */,
@@ -214,7 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8364079C1FAF91CD00DB5BB6 /* Opinion.swift in Sources */,
 				0F22E1B11E8407D1004B722A /* ViewController.swift in Sources */,
+				8364079E1FAF944D00DB5BB6 /* Statistician.swift in Sources */,
+				8364079A1FAF8D4B00DB5BB6 /* QuestionOfTheDay.swift in Sources */,
 				0F22E1AF1E8407D1004B722A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
