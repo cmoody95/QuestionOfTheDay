@@ -18,7 +18,7 @@ class Opinion : NSObject{
         self.question = question
         self.answer = answer
     }
-    convenience init(){
+    convenience override init(){
         self.init(question: QuestionOfTheDay(question: "", answer0: "", answer1: "", answer2: ""), answer: 0)
     }
 }
