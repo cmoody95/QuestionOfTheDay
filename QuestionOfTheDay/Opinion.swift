@@ -7,7 +7,7 @@
 
 import Foundation
 @objcMembers
-class Opinion{
+class Opinion : NSObject{
     var objectID: String?
     var question:QuestionOfTheDay
     var answer:Int
@@ -18,7 +18,7 @@ class Opinion{
         self.question = question
         self.answer = answer
     }
-    convenience init(){
+    convenience override init(){
         self.init(question: QuestionOfTheDay(question: "", answer0: "", answer1: "", answer2: ""), answer: 0)
     }
 }
