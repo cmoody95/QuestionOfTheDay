@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G2t-3F-bj4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G2t-3F-bj4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Item 2-->
         <scene sceneID="u4a-p8-6G0">
             <objects>
-                <viewController id="LOP-D3-5Yu" customClass="StatisticsViewController" customModule="QuestionOfTheDay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LOP-D3-5Yu" customClass="StatisticianViewController" customModule="QuestionOfTheDay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y8p-2H-xYd"/>
                         <viewControllerLayoutGuide type="bottom" id="j3S-WZ-0w4"/>
@@ -20,13 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H6s-2x-7d0">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Statistics" id="pxU-eq-5ma"/>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cL7-Fr-QVE">
                                 <rect key="frame" x="16" y="104" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -76,19 +70,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNh-Vt-IJS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Statistician" id="XEC-CC-huD"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="7Iq-OG-xzC"/>
-                    <connections>
-                        <outlet property="answer1LBL" destination="hmd-gP-gqE" id="a6V-AM-WqJ"/>
-                        <outlet property="answer1PercentLBL" destination="hds-16-BFI" id="3YH-1U-Ytg"/>
-                        <outlet property="answer2LBL" destination="WCk-ql-wmI" id="Vh8-W9-Ize"/>
-                        <outlet property="answer2PercentLBL" destination="SyG-BR-viA" id="wbQ-7N-LiT"/>
-                        <outlet property="answer3LBL" destination="buI-Oq-KbW" id="69e-Lz-Bww"/>
-                        <outlet property="answer3PercentLBL" destination="lpK-Df-Bgo" id="dlF-q4-g00"/>
-                        <outlet property="questionLBL" destination="cL7-Fr-QVE" id="q1i-KP-SVL"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="es4-ew-QCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,13 +98,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ibq-gX-yCM">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Vote!" id="CmF-yY-USh"/>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppT-UF-hDg">
                                 <rect key="frame" x="16" y="93" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -146,7 +131,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="A"/>
                                 <connections>
-                                    <action selector="answer1BTTN:" destination="Hvm-ZR-bN2" eventType="touchUpInside" id="UPV-Qn-dUE"/>
+                                    <action selector="answer1BTTN:" destination="Hvm-ZR-bN2" eventType="touchUpInside" id="Shq-kU-yuS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mce-8J-gAO">
@@ -154,7 +139,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="B"/>
                                 <connections>
-                                    <action selector="answer2BTTN:" destination="Hvm-ZR-bN2" eventType="touchUpInside" id="avF-Of-Duw"/>
+                                    <action selector="answer2BTTN:" destination="Hvm-ZR-bN2" eventType="touchUpInside" id="3U0-xt-mpx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTf-2D-quF">
@@ -162,18 +147,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="C"/>
                                 <connections>
-                                    <action selector="answer3BTTN:" destination="Hvm-ZR-bN2" eventType="touchUpInside" id="iiE-MP-uyq"/>
+                                    <action selector="answer3BTTN:" destination="Hvm-ZR-bN2" eventType="touchUpInside" id="BgH-XE-m0R"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qCU-tl-iLr">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Vote!" id="SV2-uX-tZP"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="GzK-Mc-avH"/>
                     <connections>
-                        <outlet property="answer1LBL" destination="ET8-kA-vWE" id="xx5-dg-Axw"/>
-                        <outlet property="answer2LBL" destination="sto-b2-Zlz" id="UFg-m2-IIU"/>
-                        <outlet property="answer3LBL" destination="Y7i-zn-hBW" id="vQv-aQ-6xX"/>
-                        <outlet property="questionLBL" destination="ppT-UF-hDg" id="FhD-Bd-dsr"/>
+                        <outlet property="answer1LBL" destination="ET8-kA-vWE" id="V0U-cA-EoX"/>
+                        <outlet property="answer2LBL" destination="sto-b2-Zlz" id="OUa-vS-YFG"/>
+                        <outlet property="answer3LBL" destination="Y7i-zn-hBW" id="KhD-jW-jJN"/>
+                        <outlet property="questionLBL" destination="ppT-UF-hDg" id="Y8Y-cM-Z3W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90U-50-qFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
