@@ -15,9 +15,9 @@
 		8364079A1FAF8D4B00DB5BB6 /* QuestionOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836407991FAF8D4B00DB5BB6 /* QuestionOfTheDay.swift */; };
 		8364079C1FAF91CD00DB5BB6 /* Opinion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364079B1FAF91CD00DB5BB6 /* Opinion.swift */; };
 		8364079E1FAF944D00DB5BB6 /* Statistician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364079D1FAF944D00DB5BB6 /* Statistician.swift */; };
+		83ACCD551FB28C4F00DACF5C /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCD541FB28C4F00DACF5C /* VoteViewController.swift */; };
+		83ACCD591FB28CB400DACF5C /* StatisticianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCD581FB28CB400DACF5C /* StatisticianViewController.swift */; };
 		83F3BF521FB1414600499667 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3BF511FB1414600499667 /* DatabaseManager.swift */; };
-		83F3BF541FB153B400499667 /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3BF531FB153B400499667 /* VoteViewController.swift */; };
-		83F3BF561FB153D700499667 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3BF551FB153D700499667 /* StatisticsViewController.swift */; };
 		FB86633BC42CE4C4E2F4BF7D /* Pods_QuestionOfTheDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E314E8FDEA0A05DB832318 /* Pods_QuestionOfTheDay.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,9 +33,9 @@
 		836407991FAF8D4B00DB5BB6 /* QuestionOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOfTheDay.swift; sourceTree = "<group>"; };
 		8364079B1FAF91CD00DB5BB6 /* Opinion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opinion.swift; sourceTree = "<group>"; };
 		8364079D1FAF944D00DB5BB6 /* Statistician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistician.swift; sourceTree = "<group>"; };
+		83ACCD541FB28C4F00DACF5C /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
+		83ACCD581FB28CB400DACF5C /* StatisticianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticianViewController.swift; sourceTree = "<group>"; };
 		83F3BF511FB1414600499667 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
-		83F3BF531FB153B400499667 /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
-		83F3BF551FB153D700499667 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		C1E314E8FDEA0A05DB832318 /* Pods_QuestionOfTheDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionOfTheDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF349628D74999AD67993D5 /* Pods-QuestionOfTheDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionOfTheDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuestionOfTheDay/Pods-QuestionOfTheDay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,11 +77,11 @@
 				0F22E1B01E8407D1004B722A /* ViewController.swift */,
 				836407991FAF8D4B00DB5BB6 /* QuestionOfTheDay.swift */,
 				8364079B1FAF91CD00DB5BB6 /* Opinion.swift */,
-				83F3BF531FB153B400499667 /* VoteViewController.swift */,
-				83F3BF551FB153D700499667 /* StatisticsViewController.swift */,
 				8364079D1FAF944D00DB5BB6 /* Statistician.swift */,
 				83F3BF511FB1414600499667 /* DatabaseManager.swift */,
 				0F22E1B21E8407D1004B722A /* Main.storyboard */,
+				83ACCD541FB28C4F00DACF5C /* VoteViewController.swift */,
+				83ACCD581FB28CB400DACF5C /* StatisticianViewController.swift */,
 				0F22E1B51E8407D1004B722A /* Assets.xcassets */,
 				0F22E1B71E8407D1004B722A /* LaunchScreen.storyboard */,
 				0F22E1BA1E8407D1004B722A /* Info.plist */,
@@ -232,11 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83ACCD551FB28C4F00DACF5C /* VoteViewController.swift in Sources */,
 				8364079C1FAF91CD00DB5BB6 /* Opinion.swift in Sources */,
 				0F22E1B11E8407D1004B722A /* ViewController.swift in Sources */,
-				83F3BF541FB153B400499667 /* VoteViewController.swift in Sources */,
-				83F3BF561FB153D700499667 /* StatisticsViewController.swift in Sources */,
 				83F3BF521FB1414600499667 /* DatabaseManager.swift in Sources */,
+				83ACCD591FB28CB400DACF5C /* StatisticianViewController.swift in Sources */,
 				8364079E1FAF944D00DB5BB6 /* Statistician.swift in Sources */,
 				8364079A1FAF8D4B00DB5BB6 /* QuestionOfTheDay.swift in Sources */,
 				0F22E1AF1E8407D1004B722A /* AppDelegate.swift in Sources */,
@@ -374,12 +374,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QuestionOfTheDay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.QuestionOfTheDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -389,12 +391,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QuestionOfTheDay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.QuestionOfTheDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

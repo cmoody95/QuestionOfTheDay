@@ -1,5 +1,5 @@
 //
-//  VoteViewController.swift
+//  StatisticianViewController.swift
 //  QuestionOfTheDay
 //
 //  Created by Chris Moody  on 11/7/17.
@@ -7,27 +7,11 @@
 
 import UIKit
 
-class VoteViewController: UIViewController {
-    @IBOutlet weak var questionLBL: UILabel!
-    @IBOutlet weak var answer1LBL: UILabel!
-    @IBOutlet weak var answer2LBL: UILabel!
-    @IBOutlet weak var answer3LBL: UILabel!
-    @IBAction func answer1BTTN(_ sender: Any) {
-    }
-    @IBAction func answer2BTTN(_ sender: Any) {
-    }
-    @IBAction func answer3BTTN(_ sender: Any) {
-    }
-    var questionOfTheDay = Statistician().fetchQuestionOfTheDay
+class StatisticianViewController: UIViewController {
 
     override func viewDidLoad() {
-        let questions = databaseManager.retrieveQuestionOfTheDay()
-        let questionOfTheDay = questions[0]
-
-        questionLBL.text = "\(questionOfTheDay.question!)"
         super.viewDidLoad()
-        
-        
+        self.navigationItem.title = "Statistics"
         // Do any additional setup after loading the view.
     }
 
