@@ -6,11 +6,11 @@
 //
 
 import Foundation
-
+@objcMembers
 class QuestionOfTheDay : NSObject{
-    var create:NSDate
-    var update:NSDate
-    var objectID:String
+    var create:NSDate?
+    var update:NSDate?
+    var objectID:String?
     
     var question:String?
     var answer0:String?
@@ -23,11 +23,9 @@ class QuestionOfTheDay : NSObject{
         self.answer1 = answer1
         self.answer2 = answer2
         
-        self.create = NSDate()
-        self.update = NSDate()
-        self.objectID = ""
     }
-    override convenience init(){
-        self.init(question: "", answer0: "", answer1: "", answer2: "")
+  override init(){
+    super.init()
     }
+
 }

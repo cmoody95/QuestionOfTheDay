@@ -31,15 +31,15 @@ class DatabaseManager {
     func saveOpinion(opinion answer:Opinion){
         
         dataStoreOpinion?.save(answer,
-                              response: {(result) in NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Opinion saved"), object: nil)},
-                              error: {(fault:Fault?)->Void in print("\(String(describing: fault)) happened while saving an Opinion)")})
+                               response: {(result) in NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Opinion saved"), object: nil)},
+                               error: {(fault:Fault?)->Void in print("\(String(describing: fault)) happened while saving an Opinion)")})
     }
-    func saveQuestionOfTheDay(question:QuestionOfTheDay){
-        
-        dataStoreQuestionOfTheDay?.save(question,
-                               response: {(result) in NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Question saved"), object: nil)},
-                               error: {(fault:Fault?)->Void in print("\(String(describing: fault)) happened while saving QuestionOfTheDay)")})
-    }
+    //    func saveQuestionOfTheDay(question:QuestionOfTheDay){
+    //
+    //        dataStoreQuestionOfTheDay?.save(question,
+    //                               response: {(result) in NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Question saved"), object: nil)},
+    //                               error: {(fault:Fault?)->Void in print("\(String(describing: fault)) happened while saving QuestionOfTheDay)")})
+    //    }
     
     
     func retrieveAllOpinions() ->[Opinion]{
@@ -59,22 +59,11 @@ class DatabaseManager {
         }
         return allOpinions
     }
-    func retrieveQuestionOfTheDay() ->[QuestionOfTheDay]{
+    
+    func retrieveQuestionOfTheDay() ->QuestionOfTheDay{
         
-        let numQuestionsToFetch = dataStoreQuestionOfTheDay?.getObjectCount() as! Int
-        let pageSize = 10
-        let queryBuilder = DataQueryBuilder()
-        var numQuestionsFetched = 0
-        var allQuestions:[QuestionOfTheDay] = []
-        queryBuilder!.setPageSize(Int32(pageSize)).setOffset(0)
-        
-        while numQuestionsFetched < numQuestionsToFetch {
-            let questions = self.dataStoreQuestionOfTheDay?.find(queryBuilder) as! [QuestionOfTheDay]
-            allQuestions += questions
-            numQuestionsFetched += questions.count
-            queryBuilder!.prepareNextPage()
-        }
-        return allQuestions
+        let question = self.dataStoreQuestionOfTheDay?.findFirst() as! QuestionOfTheDay
+        return question
     }
     
     

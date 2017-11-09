@@ -36,8 +36,8 @@ class Statistician{
     }
     
     func fetchQuestionOfTheDay() -> QuestionOfTheDay{
-        var questions = databaseManager.retrieveQuestionOfTheDay()
-        return questions[0]
+        let question = databaseManager.retrieveQuestionOfTheDay()
+        return question
     }
     
     func saveOpinion(_ opinion:Opinion) -> Void{

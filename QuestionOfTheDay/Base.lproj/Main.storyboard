@@ -81,6 +81,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="7Iq-OG-xzC"/>
+                    <connections>
+                        <outlet property="a1PercentLBL" destination="hds-16-BFI" id="dIc-ex-MXa"/>
+                        <outlet property="a2PercentLBL" destination="SyG-BR-viA" id="21s-2K-vEt"/>
+                        <outlet property="a3PercentLBL" destination="lpK-Df-Bgo" id="O5i-il-VDu"/>
+                        <outlet property="answer1LBL" destination="hmd-gP-gqE" id="77l-Q9-Mb5"/>
+                        <outlet property="answer2LBL" destination="WCk-ql-wmI" id="MvN-2S-MQT"/>
+                        <outlet property="answer3LBL" destination="buI-Oq-KbW" id="ZDZ-1M-nlp"/>
+                        <outlet property="questionLBL" destination="cL7-Fr-QVE" id="N0v-Ip-7ce"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="es4-ew-QCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
