@@ -12,14 +12,6 @@ import Foundation
 let databaseManager:DatabaseManager = DatabaseManager() // um, this is novel ...
 
 
-// Note: We use both asynchronous and synchronous methods here.
-// In some cases, we use Backendless' asynchronous method calls, with response and error closures
-// In others, we demonstrate how to use Apple's DispatchQueue to accomplish the same thimg
-// Whenever using asynchronous calls, we need to somehow make the classes that rely on the DatabaseManager
-// aware of when they have completed. To this end, we broadcast two messages -- "Add New Bird" and "Add New County"
-// so that when the TableViewControllers receive these, they know to reload their data.
-
-// Having problems? If Backendless is throwing a fault, use Types.tryblock(<#T##tryblock: (() -> Void)!##(() -> Void)!##() -> Void#>, catchblock: <#T##((Any?) -> Void)!##((Any?) -> Void)!##(Any?) -> Void#>), and in the catchblock, print out the fault to get details. Otherwise, ask Joel 😎
 
 
 class DatabaseManager {
@@ -41,15 +33,15 @@ class DatabaseManager {
     func saveOpinion(opinion answer:Opinion){
         
         dataStoreOpinion?.save(answer,
-                              response: {(result) in NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Opinion saved"), object: nil)},
-                              error: {(fault:Fault?)->Void in print("\(String(describing: fault)) happened while saving an Opinion)")})
+                               response: {(result) in NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Opinion saved"), object: nil)},
+                               error: {(fault:Fault?)->Void in print("\(String(describing: fault)) happened while saving an Opinion)")})
     }
-    func saveQuestionOfTheDay(question:QuestionOfTheDay){
-        
-        dataStoreQuestionOfTheDay?.save(question,
-                               response: {(result) in NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Question saved"), object: nil)},
-                               error: {(fault:Fault?)->Void in print("\(String(describing: fault)) happened while saving QuestionOfTheDay)")})
-    }
+    //    func saveQuestionOfTheDay(question:QuestionOfTheDay){
+    //
+    //        dataStoreQuestionOfTheDay?.save(question,
+    //                               response: {(result) in NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Question saved"), object: nil)},
+    //                               error: {(fault:Fault?)->Void in print("\(String(describing: fault)) happened while saving QuestionOfTheDay)")})
+    //    }
     
     
     func retrieveAllOpinions() ->[Opinion]{
@@ -69,22 +61,11 @@ class DatabaseManager {
         }
         return allOpinions
     }
-    func retrieveQuestionOfTheDay() ->[QuestionOfTheDay]{
+    
+    func retrieveQuestionOfTheDay() ->QuestionOfTheDay{
         
-        let numQuestionsToFetch = dataStoreQuestionOfTheDay?.getObjectCount() as! Int
-        let pageSize = 10
-        let queryBuilder = DataQueryBuilder()
-        var numQuestionsFetched = 0
-        var allQuestions:[QuestionOfTheDay] = []
-        queryBuilder!.setPageSize(Int32(pageSize)).setOffset(0)
-        
-        while numQuestionsFetched < numQuestionsToFetch {
-            let questions = self.dataStoreQuestionOfTheDay?.find(queryBuilder) as! [QuestionOfTheDay]
-            allQuestions += questions
-            numQuestionsFetched += questions.count
-            queryBuilder!.prepareNextPage()
-        }
-        return allQuestions
+        let question = self.dataStoreQuestionOfTheDay?.findFirst() as! QuestionOfTheDay
+        return question
     }
     
     

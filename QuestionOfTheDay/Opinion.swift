@@ -8,17 +8,16 @@
 import Foundation
 @objcMembers
 class Opinion : NSObject{
-    var objectID: String?
-    var question:QuestionOfTheDay
+    var created: NSDate?
+    var updated: NSDate?
+    var objectId: String?
+    var question:QuestionOfTheDay?
     var answer:Int
     
-    init(question:QuestionOfTheDay, answer:Int){
-        self.objectID = ""
-        
-        self.question = question
+    init( answer:Int){
         self.answer = answer
     }
     convenience override init(){
-        self.init(question: QuestionOfTheDay(question: "", answer0: "", answer1: "", answer2: ""), answer: 0)
+        self.init(answer: 0)
     }
 }

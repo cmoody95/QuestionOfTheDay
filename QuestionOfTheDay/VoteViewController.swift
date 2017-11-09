@@ -13,18 +13,25 @@ class VoteViewController: UIViewController {
     @IBOutlet weak var answer2LBL: UILabel!
     @IBOutlet weak var answer3LBL: UILabel!
     @IBAction func answer1BTTN(_ sender: Any) {
+        databaseManager.saveOpinion(opinion: Opinion( answer: 0) )
     }
     @IBAction func answer2BTTN(_ sender: Any) {
+        databaseManager.saveOpinion(opinion: Opinion( answer: 1) )
     }
     @IBAction func answer3BTTN(_ sender: Any) {
+        databaseManager.saveOpinion(opinion: Opinion( answer: 2) )
     }
     var questionOfTheDay = Statistician().fetchQuestionOfTheDay
 
     override func viewDidLoad() {
-        let questions = databaseManager.retrieveQuestionOfTheDay()
-        let questionOfTheDay = questions[0]
+        
+        let question = databaseManager.retrieveQuestionOfTheDay()
+        
+        questionLBL.text = "\(question.question!)"
+        answer1LBL.text = "\(question.answer0!)"
+        answer2LBL.text = "\(question.answer1!)"
+        answer3LBL.text = "\(question.answer2!)"
 
-        questionLBL.text = "\(questionOfTheDay.question!)"
         super.viewDidLoad()
         
         
