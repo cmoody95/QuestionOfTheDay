@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G2t-3F-bj4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G2t-3F-bj4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Statistics-->
         <scene sceneID="u4a-p8-6G0">
             <objects>
                 <viewController id="LOP-D3-5Yu" customClass="StatisticianViewController" customModule="QuestionOfTheDay" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,7 +79,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="7Iq-OG-xzC"/>
+                    <tabBarItem key="tabBarItem" title="Statistics" id="7Iq-OG-xzC"/>
                     <connections>
                         <outlet property="a1PercentLBL" destination="hds-16-BFI" id="dIc-ex-MXa"/>
                         <outlet property="a2PercentLBL" destination="SyG-BR-viA" id="21s-2K-vEt"/>
@@ -95,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="1045.5999999999999" y="625.63718140929541"/>
         </scene>
-        <!--Item 1-->
+        <!--Vote-->
         <scene sceneID="C3B-wN-jSn">
             <objects>
                 <viewController id="Hvm-ZR-bN2" customClass="VoteViewController" customModule="QuestionOfTheDay" customModuleProvider="target" sceneMemberID="viewController">
@@ -169,7 +168,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="GzK-Mc-avH"/>
+                    <tabBarItem key="tabBarItem" title="Vote" id="GzK-Mc-avH"/>
                     <connections>
                         <outlet property="answer1LBL" destination="ET8-kA-vWE" id="V0U-cA-EoX"/>
                         <outlet property="answer2LBL" destination="sto-b2-Zlz" id="OUa-vS-YFG"/>

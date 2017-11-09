@@ -6,10 +6,11 @@
 //
 
 import Foundation
-var opinions = databaseManager.retrieveAllOpinions()
+
 
 class Statistician{
      func findPercentage() -> [Double]{
+        let opinions = databaseManager.retrieveAllOpinions()
         var results:[Double] = [0.0, 0.0, 0.0]
         var numA:Double = 0.0
         var numB:Double = 0.0

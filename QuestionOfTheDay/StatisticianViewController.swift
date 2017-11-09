@@ -17,9 +17,7 @@ class StatisticianViewController: UIViewController {
     @IBOutlet weak var a3PercentLBL: UILabel!
     
     override func viewWillAppear(_ animated: Bool){
-        super.viewWillAppear(animated)
         let percents = Statistician().findPercentage()
-
         a1PercentLBL.text = "\(percents[0] * 100)%"
         a2PercentLBL.text = "\(percents[1] * 100)%"
         a3PercentLBL.text = "\(percents[2] * 100)%"
